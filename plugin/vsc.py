@@ -568,9 +568,9 @@ def getfirstcommand(line):
 
 def check_firstcommand(lnum, command):
     if not command:
-        warning(lnum, "Unknown command")
+        warning(lnum, "Line starts with an unknown command")
     elif command in unusualvimcommands:
-        warning(lnum, "Line starts with a rather unusual command. Are you sure this is what you want?")
+        warning(lnum, "'" + command + "' is a rather unusual command. Are you sure this is what you want?")
 
 
 def check_start_of_control_structure(lnum, command):
@@ -627,30 +627,29 @@ def check_function_args(lnum, command, line):
         args = [ a.strip() for a in function_match.group(2).split(",") ]
         if args == ['']:
             args = []
-        unseen_function_args.append(args)
-        return
-    if command == "endfunction" and len(unseen_function_args) > 0:
-        if len(unseen_function_args[-1]) > 0:
-            warning(lnum, "Unused function arguments: " + ", ".join(unseen_function_args[-1]))
-        unseen_function_args.pop()
+        unseen_function_args.append((lnum, args))
         return
 
-    used_args = re.findall(r"\ba:(\w+)", line)
-
-    if not used_args:
+    if command == "endfunction" and len(unseen_function_args) >= 1:
+        (fun_def_lnum, current_unseen_args) = unseen_function_args.pop()
+        if len(current_unseen_args) > 0:
+            warning(fun_def_lnum, "Unused function arguments: " + ", ".join(current_unseen_args))
         return
 
-    if len(unseen_function_args) == 0:
-        error(lnum, "Using function argument variables outside of a function is usually a bad idea")
-        return
+    seen_args = re.findall(r"\ba:(\w+)", line)
 
-    current_args = unseen_function_args.pop()
-    for used_arg in used_args:
-        if used_arg in current_args:
-            current_args.remove(used_arg)
-        elif re.match(r'\d+', used_arg) and '...' in current_args:
-            current_args.remove('...')
-    unseen_function_args.append(current_args)
+    if seen_args:
+        if len(unseen_function_args) == 0:
+            error(lnum, "Apparently using a function argument variable outside of a function")
+            return
+
+        (fun_def_lnum, current_unseen_args) = unseen_function_args.pop()
+        for seen_arg in seen_args:
+            if seen_arg in current_unseen_args:
+                current_unseen_args.remove(seen_arg)
+            elif re.match(r'\d+', seen_arg) and '...' in current_unseen_args:
+                current_unseen_args.remove('...')
+        unseen_function_args.append((fun_def_lnum, current_unseen_args))
 
 
 def check(lines):
@@ -704,6 +703,7 @@ def removestuff(lines):
     too complicated:
         - empty lines
         - comment lines
+        - lines starting with #!
         - lines with just a number (to jump to a line)
         - embedded python/ruby/tcl/perl/lua code
         - autocmd, syntax, command and *map commands
@@ -713,7 +713,7 @@ def removestuff(lines):
     while lnum < len(lines):
         line = lines[lnum][1]
 
-        if line == '' or line.startswith('"'):
+        if line == '' or line.startswith('"') or line.startswith("#!"):
             lnum += 1
             continue
 
