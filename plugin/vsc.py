@@ -12,7 +12,7 @@ vimcommands = {
     "echoerr": "echoe",
     "echohl": "echoh",
     "echomsg": "echom",
-    "echon": "",
+    "echon": "echon",
     "else": "el",
     "elseif": "elsei",
     "endif": "en",
@@ -20,19 +20,19 @@ vimcommands = {
     "endfunction": "endf",
     "endtry": "endt",
     "endwhile": "endw",
-    "let": "",
+    "let": "let",
     "unlet": "unl",
     "while": "wh",
-    "for": "",
-    "if": "",
+    "for": "for",
+    "if": "if",
     "break": "brea",
     "call": "cal",
     "catch": "cat",
     "continue": "con",
-    "tabnew": "",
+    "tabnew": "tabnew",
     "finish": "fini",
-    "py3": "",
-    "python3": "",
+    "py3": "py3",
+    "python3": "python3",
     "python": "py",
     "perl": "pe",
     "ruby": "rub",
@@ -47,7 +47,7 @@ vimcommands = {
     "redraw": "redr",
     "botright": "bo",
     "silent": "sil",
-    "try": "",
+    "try": "try",
     "finally": "fina",
     "onoremap": "ono",
     "vnoremap": "vn",
@@ -66,7 +66,7 @@ vimcommands = {
     "belowright": "bel",
     "Next": "N",
     "Print": "P",
-    "X": "",
+    "X": "X",
     "all": "al",
     "amenu": "am",
     "anoremenu": "an",
@@ -74,7 +74,7 @@ vimcommands = {
     "argadd": "arga",
     "argdelete": "argd",
     "argedit": "arge",
-    "argdo": "",
+    "argdo": "argdo",
     "argglobal": "argg",
     "arglocal": "argl",
     "argument": "argu",
@@ -95,8 +95,8 @@ vimcommands = {
     "breakdel": "breakd",
     "breaklist": "breakl",
     "browse": "bro",
-    "bufdo": "",
-    "buffers": "",
+    "bufdo": "bufdo",
+    "buffers": "buffers",
     "bwipeout": "bw",
     "change": "c",
     "cNext": "cN",
@@ -107,9 +107,9 @@ vimcommands = {
     "caddexpr": "cad",
     "caddfile": "caddf",
     "cbuffer": "cb",
-    "cc": "",
+    "cc": "cc",
     "cclose": "ccl",
-    "cd": "",
+    "cd": "cd",
     "center": "ce",
     "cexpr": "cex",
     "cfile": "cf",
@@ -162,7 +162,7 @@ vimcommands = {
     "diffpatch": "diffp",
     "diffput": "diffpu",
     "diffsplit": "diffs",
-    "diffthis": "",
+    "diffthis": "diffthis",
     "digraphs": "dig",
     "display": "di",
     "djump": "dj",
@@ -175,11 +175,11 @@ vimcommands = {
     "earlier": "ea",
     "emenu": "em",
     "enew": "ene",
-    "ex": "",
+    "ex": "ex",
     "exit": "exi",
     "exusage": "exu",
     "file": "f",
-    "files": "",
+    "files": "files",
     "filetype": "filet",
     "find": "fin",
     "first": "fir",
@@ -220,7 +220,7 @@ vimcommands = {
     "iunmenu": "iunme",
     "join": "j",
     "jumps": "ju",
-    "k": "",
+    "k": "k",
     "keepalt": "keepa",
     "keepmarks": "kee",
     "keepjumps": "keepj",
@@ -249,7 +249,7 @@ vimcommands = {
     "lgrep": "lgr",
     "lgrepadd": "lgrepa",
     "lhelpgrep": "lh",
-    "ll": "",
+    "ll": "ll",
     "llast": "lla",
     "llist": "lli",
     "lmake": "lmak",
@@ -268,10 +268,10 @@ vimcommands = {
     "lprevious": "lp",
     "lpfile": "lpf",
     "lrewind": "lr",
-    "ls": "",
+    "ls": "ls",
     "ltag": "lt",
     "lunmap": "lu",
-    "lua": "",
+    "lua": "lua",
     "luado": "luad",
     "luafile": "luaf",
     "lvimgrep": "lv",
@@ -280,9 +280,9 @@ vimcommands = {
     "move": "m",
     "mark": "ma",
     "make": "mak",
-    "map": "",
+    "map": "map",
     "mapclear": "mapc",
-    "marks": "",
+    "marks": "marks",
     "match": "mat",
     "menu": "me",
     "menutranslate": "menut",
@@ -299,7 +299,7 @@ vimcommands = {
     "nbkey": "nb",
     "nbsart": "nbs",
     "next": "n",
-    "new": "",
+    "new": "new",
     "nmapclear": "nmapc",
     "nmenu": "nme",
     "nnoremap": "nn",
@@ -404,12 +404,6 @@ vimcommands = {
     "snoremenu": "snoreme",
     "sort": "sor",
     "source": "so",
-    "spelldump": "spelld",
-    "spellgood": "spe",
-    "spellinfo": "spelli",
-    "spellrepall": "spellr",
-    "spellundo": "spellu",
-    "spellwrong": "spellw",
     "split": "sp",
     "sprevious": "spr",
     "srewind": "sre",
@@ -428,11 +422,11 @@ vimcommands = {
     "sview": "sv",
     "swapname": "sw",
     "syncbind": "sync",
-    "t": "",
+    "t": "t",
     "tNext": "tN",
     "tabNext": "tabN",
     "tabclose": "tabc",
-    "tabdo": "",
+    "tabdo": "tabdo",
     "tabedit": "tabe",
     "tabfind": "tabf",
     "tabfirst": "tabfir",
@@ -442,10 +436,10 @@ vimcommands = {
     "tabonly": "tabo",
     "tabprevious": "tabp",
     "tabrewind": "tabr",
-    "tabs": "",
-    "tab": "",
+    "tabs": "tabs",
+    "tab": "tab",
     "tag": "ta",
-    "tags": "",
+    "tags": "tags",
     "tcl": "tc",
     "tcldo": "tcld",
     "tclfile": "tclf",
@@ -469,12 +463,12 @@ vimcommands = {
     "update": "up",
     "verbose": "verb",
     "vertical": "vert",
-    "windo": "",
+    "windo": "windo",
     "write": "w",
     "wall": "wa",
     "winsize": "wi",
     "wincmd": "winc",
-    "wq": "",
+    "wq": "wq",
     "wqall": "wqa",
     "vmap": "vm",
     "vmapclear": "vmapc",
@@ -500,9 +494,9 @@ unusualvimcommands = {
     "unhide": "unh",
     "wviminfo": "wv",
     "xall": "xa",
-    "~": "",
+    "~": "~",
     "wundo": "wu",
-    "z": "",
+    "z": "z",
     "wsverb": "ws",
     "xit": "x",
     "yank": "y",
@@ -517,23 +511,33 @@ unusualvimcommands = {
     "view": "vie",
     "wNext": "wN",
     "visual": "vi",
-    "!": "",
-    "!!": "",
-    "#": "",
-    "&": "",
-    "*": "",
-    "<": "",
-    "=": "",
-    ">": "",
-    "@": "",
-    "@@": "",
+    "!": "!",
+    "!!": "!!",
+    "#": "#",
+    "&": "&",
+    "*": "*",
+    "<": "<",
+    "=": "=",
+    ">": ">",
+    "@": "@",
+    "@@": "@@",
+    "spelldump": "spelld",
+    "spellgood": "spe",
+    "spellinfo": "spelli",
+    "spellrepall": "spellr",
+    "spellundo": "spellu",
+    "spellwrong": "spellw",
 }
+
+commands_with_equal_sign = set(["put"])
 
 pattern_vimcommand = re.compile(r":?\s*(?:%|(?:\d+|\.|\$)(?:[,;](?:\d+|\.|\$))?)?\s*([a-zA-Z]\w*|[~!#&*<=>@]|!!|@@)")
 pattern_str_single = re.compile(r"'(''|[^'])*'")
 pattern_str_double = re.compile(r'"(\\"|[^"])*"')
 pattern_function_def = re.compile(r"(fu\w*)\s*!?\s*[^(]+\(([^)]*)\)")
 pattern_notvimscript = re.compile(r"(py|py3|pyt|pyth|pytho|python|python3|rub|ruby|pe|per|perl|tc|tcl|lua)\s+<<\s*(\w+)$")
+pattern_cmd_and_assignment = re.compile(r"(\w+)\s+=\s+")
+pattern_pipe = re.compile(r'(?<!\|)\|(?!\|)')
 
 issues_list = []
 csstack = []
@@ -571,6 +575,12 @@ def check_firstcommand(lnum, command):
         warning(lnum, "Line starts with an unknown command")
     elif command in unusualvimcommands:
         warning(lnum, "'" + command + "' is a rather unusual command. Are you sure this is what you want?")
+
+
+def check_invalid_assignment(lnum, line):
+    match_assignment = pattern_cmd_and_assignment.match(line)
+    if match_assignment and getnormalizedvimcommand(match_assignment.group(1)) not in commands_with_equal_sign:
+        warning(lnum, "Looks a bit like an assignment with missing 'let'")
 
 
 def check_start_of_control_structure(lnum, command):
@@ -659,6 +669,8 @@ def check(lines):
 
         check_firstcommand(lnum, firstcommand)
 
+        check_invalid_assignment(lnum, line)
+
         check_start_of_control_structure(lnum, firstcommand)
 
         check_elseif(lnum, firstcommand)
@@ -670,7 +682,7 @@ def check(lines):
         check_function_args(lnum, firstcommand, line)
 
     if len(csstack) > 2:
-        error(len(lines)-1, "Dangling " + ", ".join(str(i) for i in csstack[2:]))
+        error(lines[-1][0], "Dangling " + ", ".join(str(i) for i in csstack[2:]))
 
 
 def joinlines(lines):
@@ -760,9 +772,9 @@ def collapsestrings(lines):
                 break
             else:
                 if match_single.start() < match_double.start():
-                    line = pattern_str_single.sub("", line)
+                    line = pattern_str_single.sub("", line, 1)
                 else:
-                    line = pattern_str_double.sub("", line)
+                    line = pattern_str_double.sub("", line, 1)
         result.append((lnum, line))
     return result
 
@@ -770,7 +782,7 @@ def collapsestrings(lines):
 def splitatpipe(lines):
     result = []
     for ln, line in lines:
-        splitlines = re.split(r'(?<!\|)\|(?!\|)', line)
+        splitlines = pattern_pipe.split(line)
         result.extend((ln, s) for s in splitlines)
     return result
 
