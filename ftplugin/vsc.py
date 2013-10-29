@@ -2,6 +2,7 @@
 # coding: utf-8
 
 import sys
+import os
 import re
 
 vimcommands = {
@@ -809,6 +810,6 @@ if __name__ == '__main__':
         print "Give me some Vimscript files, please"
         exit()
 
-    vsfiles = sys.argv[1:]
+    vsfiles = [f for f in sys.argv[1:] if os.path.isfile(f)]
     for vsfile in vsfiles:
         start(vsfile)
